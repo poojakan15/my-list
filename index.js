@@ -97,7 +97,7 @@ function renderList(data) {
       Object.keys(data).forEach(label =>{
           const item = renderListItem(label, data[label])
           list.appendChild(item)
-          list.appendChild(del)
+        //   list.appendChild(del)
 
           const image = document.createElement('button')
           image.textContent = "Change Background"
@@ -106,54 +106,55 @@ function renderList(data) {
         if(form.userInput.value === "Maui's Dolphin") {
             temp = "Maui's Dolphin"
 
-            list.appendChild(image)
-            list.appendChild(imgMaui)
-
             list.innerHTML += "<br\>You listed one of the <b\>top 5 most endangered</b\> dolphin species."
             list.innerHTML += " Maui’s dolphin lives off the coast of New Zealand, and with just 55 animals alive today, is the most endangered dolphin species."
             list.innerHTML += " Click <a href=\"http://justingregg.com/top-5-most-endangered-dolphin-species-and-how-you-can-help/\">here</a> to find out more."
+        
+            list.appendChild(imgMaui)
+            list.appendChild(image)
         }
         if(form.userInput.value === "Hector's Dolphin") {
             temp = "Hector's Dolphin"
 
-            list.appendChild(image)
-            list.appendChild(imgHec)
-
             list.innerHTML += "<br\>You listed one of the <b\>top 5 most endangered</b\> dolphin species."
             list.innerHTML += " Hector’s dolphins inhabit a small range off the coast of New Zealand."
             list.innerHTML += " Click <a href=\"http://justingregg.com/top-5-most-endangered-dolphin-species-and-how-you-can-help/\">here</a> to find out more."
+       
+            list.appendChild(imgHec)
+            list.appendChild(image)
         } 
         if (form.userInput.value === "Indus and Ganges River Dolphin") {
             temp = "Indus and Ganges River Dolphin"
 
-            list.appendChild(image)
-            list.appendChild(imgInd)
-
             list.innerHTML += "<br\>You listed one of the <b\>top 5 most endangered</b\> dolphin species."
             list.innerHTML += " The Indus and Ganges River dolphins are listed as Endangered by the IUCN."
             list.innerHTML += " Click <a href=\"http://justingregg.com/top-5-most-endangered-dolphin-species-and-how-you-can-help/\">here</a> to find out more."
+        
+            list.appendChild(imgInd)
+            list.appendChild(image)
         }
         if(form.userInput.value === "Vaquita") {
             temp = "Vaquita" 
 
-            list.appendChild(image)
-            list.appendChild(imgVaq)
-
             list.innerHTML += "<br\>You listed one of the <b\>top 5 most endangered</b\> dolphin species."
             list.innerHTML += " The vaquita is a porpoise species is considered the world’s most-endangered cetacean"
             list.innerHTML += " Click <a href=\"http://justingregg.com/top-5-most-endangered-dolphin-species-and-how-you-can-help/\">here</a> to find out more."
+       
+            list.appendChild(imgVaq)
+            list.appendChild(image)
         }
         if(form.userInput.value === "Baiji") {
             temp = "Baiji"
 
-            list.appendChild(image)
-            list.appendChild(imgBai)
-
             list.innerHTML += "<br\>You listed one of the <b\>top 5 most endangered</b\> dolphin species."
             list.innerHTML += " The Baiji or Yangtze River dolphin is listed by the IUCN as Critically Endangered, but is considered by most scientists to be functionally extinct."
             list.innerHTML += " Click <a href=\"http://justingregg.com/top-5-most-endangered-dolphin-species-and-how-you-can-help/\">here</a> to find out more."
+    
+            list.appendChild(imgBai)
+            list.appendChild(image)
         }
 
+         list.appendChild(del)
         })
       return list
 }
