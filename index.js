@@ -66,10 +66,10 @@ let temp = ""
 
 const handleImages = function() {
     let body = document.getElementById('bodyHTML')
-    body.style.height = "100%"
-    body.style.backgroundRepeat = "no-repeat"
+    // body.style.height = "100%"
+    // body.style.backgroundRepeat = "no-repeat"
     body.style.backgroundPosition = "center"
-    body.style.backgroundSize = "cover"
+    // body.style.backgroundSize = "cover"
 
     if(temp === "Maui's Dolphin") {
         body.style.backgroundImage = `url(${imgMaui.src})`;
