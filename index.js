@@ -39,6 +39,10 @@ const handleReset = function(ev) {
     ev.preventDefault()
     const div = document.querySelector('div')
     div.remove();
+    let body = document.getElementById('bodyHTML')
+    body.style.backgroundColor = "#20b2aa"
+    body.style.backgroundImage = "none"
+    // body.style.backgroundColor = "black"
 }
 
 reset.addEventListener('click', handleReset)
@@ -88,6 +92,13 @@ const handleImages = function() {
     }
 }
 
+const handleBackground = function() {
+    let body = document.getElementById('bodyHTML')
+    body.style.backgroundColor = "#20b2aa"
+    body.style.backgroundImage = "none"
+
+}
+
 function renderList(data) {
       const list = document.createElement('ul')
       const del = document.createElement('button')
@@ -103,6 +114,10 @@ function renderList(data) {
           image.textContent = "Change Background"
           image.addEventListener('click', handleImages)
 
+          const revert = document.createElement('button')
+          revert.textContent = "Revert Background"
+          revert.addEventListener('click', handleBackground)
+
         if(form.userInput.value === "Maui's Dolphin") {
             temp = "Maui's Dolphin"
 
@@ -112,6 +127,7 @@ function renderList(data) {
         
             list.appendChild(imgMaui)
             list.appendChild(image)
+            list.appendChild(revert)
         }
         if(form.userInput.value === "Hector's Dolphin") {
             temp = "Hector's Dolphin"
@@ -122,6 +138,7 @@ function renderList(data) {
        
             list.appendChild(imgHec)
             list.appendChild(image)
+            list.appendChild(revert)
         } 
         if (form.userInput.value === "Indus and Ganges River Dolphin") {
             temp = "Indus and Ganges River Dolphin"
@@ -132,6 +149,7 @@ function renderList(data) {
         
             list.appendChild(imgInd)
             list.appendChild(image)
+            list.appendChild(revert)
         }
         if(form.userInput.value === "Vaquita") {
             temp = "Vaquita" 
@@ -142,6 +160,7 @@ function renderList(data) {
        
             list.appendChild(imgVaq)
             list.appendChild(image)
+            list.appendChild(revert)
         }
         if(form.userInput.value === "Baiji") {
             temp = "Baiji"
@@ -152,6 +171,7 @@ function renderList(data) {
     
             list.appendChild(imgBai)
             list.appendChild(image)
+            list.appendChild(revert)
         }
 
          list.appendChild(del)
