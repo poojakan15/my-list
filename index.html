@@ -5,28 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <!-- <center> -->
+     <center> 
         <h1 class="head" id="head1">My List</h1>
 
         <form id="userForm">
             <p>
                 <label for="userInput">Name </label>
                 <input type="text" id="inputText" name="userInput" placeholder="Type Here.." autofocus>
+                <button type="reset">Clear</button>
                 
-                <select>
+                <!-- <select>
+                    <option value="species">Species</option>
                     <option value="extant">Extant</option>
                     <option value="endangered">Endangered</option>
                     <option value="extinct">Extinct</option>
-                </select>
+                </select> -->
             </p>
             <br><br>
             <button type="submit">Submit</button>
-            <button type="reset">Clear</button>
-            <button type="button">Temp</button>
+            <!-- <button type="reset">Clear</button> -->
+            <!-- <button type="button">Temp</button> -->
         </form>
-    <!-- </center> -->
+     </center> 
+
+        <main>
+             <div id="users">
+             </div>
+        </main>
+        <script src="index.js"></script>
 </body>
 </html>
