@@ -80,7 +80,38 @@ const handleDelete = function(ev) {
 //         list.appendChild(imgBai)
 //     }
 // }
-  
+let temp = ""
+
+const handleImages = function() {
+    let body = document.getElementById('bodyHTML')
+    body.style.height = "100%"
+    body.style.backgroundRepeat = "no-repeat"
+    body.style.backgroundPosition = "center"
+    body.style.backgroundSize = "cover"
+    
+    if(temp === "Maui's Dolphin") {
+        body.style.backgroundImage = `url(${imgMaui.src})`;
+    }
+    if(temp === "Hector's Dolphin") {
+        body.style.backgroundImage = `url(${imgHec.src})`;
+    } 
+    if (temp === "Indus and Ganges River Dolphin") {
+        body.style.backgroundImage = `url(${imgInd.src})`;
+    }
+    if(temp === "Vaquita") {
+        body.style.backgroundImage = `url(${imgVaq.src})`;
+    }
+    if(temp === "Baiji") {
+        body.style.backgroundImage = `url(${imgBai.src})`;
+    }
+}
+
+const handleBackground = function() {
+    let body = document.getElementById('bodyHTML')
+     body.style.backgroundColor = "#000000"
+    // body.style.backgroundImage = `url(${imgBai.src})`;
+}
+
 function renderList(data) {
       const list = document.createElement('ul')
       const del = document.createElement('button')
@@ -93,35 +124,46 @@ function renderList(data) {
           list.appendChild(del)
 
           const image = document.createElement('button')
-          image.textContent = "Image"
+          image.textContent = "Change Background"
+           image.addEventListener('click', handleImages)
 
-        //   if(form.userInput.value === "Maui's Dolphin" || 
-        //   form.userInput.value === "Hector's Dolphin" ||
-        //   form.userInput.value === "Indus and Ganges River Dolphin" ||
-        //   form.userInput.value === "Vaquita" ||
-        //   form.userInput.value === "Baiji") {
-        //       list.appendChild(image)
-        //       image.addEventListener('click', handleImages)
-        //   }
+          const revert = document.createElement('button')
+          revert.textContent = "Revert Background"
+          revert.addEventListener('click', handleBackground)
 
         if(form.userInput.value === "Maui's Dolphin") {
+            temp = "Maui's Dolphin"
             list.appendChild(image)
+            // image.addEventListener('click', handleImages)
+            list.appendChild(revert)
             list.appendChild(imgMaui)
         }
         if(form.userInput.value === "Hector's Dolphin") {
+            temp = "Hector's Dolphin"
             list.appendChild(image)
+            // image.addEventListener('click', handleImages)
+            list.appendChild(revert)
             list.appendChild(imgHec)
         } 
         if (form.userInput.value === "Indus and Ganges River Dolphin") {
+            temp = "Indus and Ganges River Dolphin"
             list.appendChild(image)
+            // image.addEventListener('click', handleImages)
+            list.appendChild(revert)
             list.appendChild(imgInd)
         }
         if(form.userInput.value === "Vaquita") {
+            temp = "Vaquita" 
             list.appendChild(image)
+            // image.addEventListener('click', handleImages)
+            list.appendChild(revert)
             list.appendChild(imgVaq)
         }
         if(form.userInput.value === "Baiji") {
+            temp = "Baiji"
             list.appendChild(image)
+            // image.addEventListener('click', handleImages)
+            list.appendChild(revert)
             list.appendChild(imgBai)
         }
 

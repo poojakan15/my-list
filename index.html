@@ -7,26 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css" />
 </head>
-<body>
+<body id="bodyHTML">
+
+        <button onclick="myFunction()">Hint</button>
+
+        <p id="demo"></p>
+
+        <script>
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "Try entering any of the following Dolphin Species: \ Maui’s Dolphin \ Hector’s Dolphin \n Indus and Ganges River Dolphin \n Vaquita \n Baiji";
+        
+        }
+        </script>
+
+
      <center> 
-        <h1 class="head" id="head1">Dolphin Species</h1>
-        <h3><i>A Very Blue List</i></h3>
-        <h3>created by Pooja Kanuri</h3>
-        <h4>Languages Used: HTML, JavaScript, and SeaSS</h4>
+        <h1 class="head" id="head1">Under the SeaSS</h1>
 
         <form id="userForm">
-            <p>
+            <p class="para">
                 <label for="userInput">Name of Dolphin: </label>
                 <input type="text" id="inputText" name="userInput" placeholder="Type Here.." autofocus>
                 <button type="reset">Clear</button>
-                <button type="button">?</button>
+                <!-- <button type="button">?</button> -->
+                <!-- <button onclick="myFunction()">Click me</button>
+
+                <p id="demo"></p>
+
+                <script>
+                function myFunction() {
+                document.getElementById("demo").innerHTML = "Try entering any of the following Dolphin Species: \ Maui’s Dolphin \ Hector’s Dolphin \n Indus and Ganges River Dolphin \n Vaquita \n Baiji";
                 
-                <!-- <select>
-                    <option value="species">Species</option>
-                    <option value="extant">Extant</option>
-                    <option value="endangered">Endangered</option>
-                    <option value="extinct">Extinct</option>
-                </select> -->
+                }
+                </script> -->
             </p>
             <br><br>
             <button type="submit">Submit</button>
