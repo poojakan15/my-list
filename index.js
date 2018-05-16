@@ -62,24 +62,6 @@ const handleDelete = function(ev) {
     listItem.parentNode.remove()
 }
 
-// const handleImages = function() {
-//     //list.preventDefault()
-//     if(form.userInput.value === "Maui's Dolphin") {
-//         list.appendChild(imgMaui)
-//     }
-//     if(form.userInput.value === "Hector's Dolphin") {
-//         list.appendChild(imgHec)
-//     } 
-//     if (form.userInput.value === "Indus and Ganges River Dolphin") {
-//         list.appendChild(imgInd)
-//     }
-//     if(form.userInput.value === "Vaquita") {
-//         list.appendChild(imgVaq)
-//     }
-//     if(form.userInput.value === "Baiji") {
-//         list.appendChild(imgBai)
-//     }
-// }
 let temp = ""
 
 const handleImages = function() {
@@ -124,7 +106,7 @@ function renderList(data) {
           list.appendChild(del)
 
           const image = document.createElement('button')
-          image.textContent = "Change Background (one image)"
+          image.textContent = "Change Background"
           image.addEventListener('click', handleImages)
 
           const revert = document.createElement('button')

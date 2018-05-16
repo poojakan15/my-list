@@ -9,13 +9,13 @@
 </head>
 <body id="bodyHTML">
 
-        <button onclick="myFunction()">Hint</button>
+        <button onclick="myFunction()">Can't think of one? Here's a hint!</button>
 
         <p id="demo"></p>
 
         <script>
         function myFunction() {
-        document.getElementById("demo").innerHTML = "Try entering any of the following Dolphin Species: \ Maui’s Dolphin \ Hector’s Dolphin \n Indus and Ganges River Dolphin \n Vaquita \n Baiji";
+        document.getElementById("demo").innerHTML = "Maui’s Dolphin" + "\n" +  " Hector’s Dolphin \n Indus and Ganges River Dolphin \n Vaquita \n Baiji";
         
         }
         </script>
@@ -26,20 +26,9 @@
 
         <form id="userForm">
             <p class="para">
-                <label for="userInput">Name of Dolphin: </label>
+                <label for="userInput">Name a Dolphin Species </label>
                 <input type="text" id="inputText" name="userInput" placeholder="Type Here.." autofocus>
                 <button type="reset">Clear</button>
-                <!-- <button type="button">?</button> -->
-                <!-- <button onclick="myFunction()">Click me</button>
-
-                <p id="demo"></p>
-
-                <script>
-                function myFunction() {
-                document.getElementById("demo").innerHTML = "Try entering any of the following Dolphin Species: \ Maui’s Dolphin \ Hector’s Dolphin \n Indus and Ganges River Dolphin \n Vaquita \n Baiji";
-                
-                }
-                </script> -->
             </p>
             <br><br>
             <button type="submit">Submit</button>
