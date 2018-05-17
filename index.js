@@ -1,3 +1,5 @@
+const arr = [];
+
 const form = document.querySelector('#userForm')
 
 let imgMaui = document.createElement("img");
@@ -64,6 +66,8 @@ const handleDelete = function(ev) {
     ev.preventDefault()
     const listItem = ev.target
     listItem.parentNode.remove()
+    arr.splice(arr.indexOf(listItem), 1)
+
 }
 
 let temp = ""
@@ -108,6 +112,7 @@ function renderList(data) {
       Object.keys(data).forEach(label =>{
           const item = renderListItem(label, data[label])
           list.appendChild(item)
+          arr.push(item)
         //   list.appendChild(del)
 
           const image = document.createElement('button')
